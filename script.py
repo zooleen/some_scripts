@@ -1,3 +1,12 @@
+#!/usr/bin/python3
+# This script reads arguments from a command-line.
+# Also it uses regular experssions for a extract IP
+# address from a string.
+# Maked for one guy from tg:@srv_admins
+# Usage: ./script.py <hostame>
+# For local usage only
+# Copyright Ivan Doobro 2020
+
 from sys import argv
 
 i, ihost = argv
