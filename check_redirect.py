@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 #
 # This script examing <host> from first argument
 # for redirecting to a link that include <expression>
@@ -17,13 +17,13 @@ import re
 
 scriptName, targetHost, expression = argv
 
-ext = popen("curl -Ls -o /dev/null -w %{url_effective} " + targetHost + "/click/1/1")
+ext = popen("curl -Ls -o /dev/null -w %{url_effective} https://" + targetHost + "/click/1/1")
 # Amazing code <3
 for i in ext:
     myStr = i
     break
 
 if (re.search(expression, myStr) == None):
-    exit(1)
+    print(targetHost)
 else:
     exit(0)
